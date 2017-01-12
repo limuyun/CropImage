@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QZ7-Ho-ZZJ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="lCw-PB-eRW">
+            <objects>
+                <navigationController id="QZ7-Ho-ZZJ" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SOZ-Ml-aO8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LC5-Mg-Ymx" kind="relationship" relationship="rootViewController" id="CjJ-pD-rRD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mTC-D8-pj3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-495" y="7"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CMi-m2-b2G">
+            <objects>
+                <viewController id="LC5-Mg-Ymx" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="do1-z7-zN8"/>
+                        <viewControllerLayoutGuide type="bottom" id="W2r-Hc-UGJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wtY-4v-IbH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PmP-Yq-C7Q">
+                                <rect key="frame" x="128" y="119" width="120" height="120"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="3TL-Nv-a4e"/>
+                                    <constraint firstAttribute="width" constant="120" id="oss-6y-W6a"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="btnClick:" destination="LC5-Mg-Ymx" eventType="touchUpInside" id="iRp-Bx-dRS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择头像" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kw2-4t-Qb8">
+                                <rect key="frame" x="94" y="255" width="188" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="hbr-5y-37e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kw2-4t-Qb8" firstAttribute="top" secondItem="PmP-Yq-C7Q" secondAttribute="bottom" constant="16" id="DOG-NC-Ipr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kw2-4t-Qb8" secondAttribute="trailing" constant="77" id="XPL-L2-cCv"/>
+                            <constraint firstItem="PmP-Yq-C7Q" firstAttribute="centerX" secondItem="wtY-4v-IbH" secondAttribute="centerX" id="dHH-Et-dvf"/>
+                            <constraint firstItem="kw2-4t-Qb8" firstAttribute="leading" secondItem="wtY-4v-IbH" secondAttribute="leadingMargin" constant="78" id="sqZ-gv-SHu"/>
+                            <constraint firstItem="PmP-Yq-C7Q" firstAttribute="top" secondItem="do1-z7-zN8" secondAttribute="bottom" constant="55" id="zbT-0a-EOA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xjG-fK-FlW"/>
+                    <connections>
+                        <outlet property="headButton" destination="PmP-Yq-C7Q" id="0Rt-vV-PhB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YqW-al-ccY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="405.60000000000002" y="6.746626686656672"/>
+        </scene>
+    </scenes>
+</document>
